@@ -21,7 +21,7 @@ const About = () => {
           <h2>
             <span>
               <span className="animated-layer fade-in-up-animation fadeInUp wow">
-                Steven
+                Imad
               </span>
             </span>
             <span>

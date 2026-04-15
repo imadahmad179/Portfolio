@@ -15,7 +15,7 @@ import { Fragment, useEffect } from "react";
 const Index = () => {
   useEffect(() => {
     jqueryFuntion();
-  });
+  }, []);
 
   return (
     <Fragment>

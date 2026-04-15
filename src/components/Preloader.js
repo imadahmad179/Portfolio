@@ -1,6 +1,6 @@
 const Preloader = () => {
   return (
-    <div id="preloader" className="preloaded">
+    <div id="preloader">
       <div className="line" />
     </div>
   );

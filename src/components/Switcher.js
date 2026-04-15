@@ -1,5 +1,4 @@
-import Head from "next/head";
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 const colors = [
   { id: 1, name: "yellow" },
   { id: 2, name: "green" },
@@ -14,11 +13,20 @@ const Switcher = () => {
   const [color, setColor] = useState("yellow");
   const [toggle, setToggle] = useState(false);
 
+  useEffect(() => {
+    const linkId = "theme-skin-stylesheet";
+    let link = document.getElementById(linkId);
+    if (!link) {
+      link = document.createElement("link");
+      link.id = linkId;
+      link.rel = "stylesheet";
+      document.head.appendChild(link);
+    }
+    link.href = `/css/skins/${color}.css`;
+  }, [color]);
+
   return (
     <Fragment>
-      <Head>
-        <link rel="stylesheet" href={`css/skins/${color}.css`} />
-      </Head>
       <div
         id="switcher"
         className={toggle ? "open" : "close"}
@@ -27,18 +35,20 @@ const Switcher = () => {
         <div className="content-switcher">
           <h4>COLOR SWITCHER</h4>
           <ul>
-            {colors.map((color) => (
-              <li>
+            {colors.map((colorItem) => (
+              <li key={colorItem.id}>
                 <a
                   href="#"
-                  title={color.name}
+                  title={colorItem.name}
                   className="color"
-                  key={color.id}
-                  onClick={() => setColor(color.name)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setColor(colorItem.name);
+                  }}
                 >
                   <img
-                    src={`assets/styleswitcher/${color.name}.png`}
-                    alt={color.name}
+                    src={`assets/styleswitcher/${colorItem.name}.png`}
+                    alt={colorItem.name}
                   />
                 </a>
               </li>

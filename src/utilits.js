@@ -2,7 +2,7 @@ import $ from "jquery";
 import "jquery-mousewheel";
 import "malihu-custom-scrollbar-plugin";
 export const jqueryFuntion = () => {
-  $(window).on("load", function () {
+  const onLoad = () => {
     /* ----------------------------------------------------------- */
     /*  PAGE PRELOADER
     /* ----------------------------------------------------------- */
@@ -11,6 +11,9 @@ export const jqueryFuntion = () => {
     setTimeout(function () {
       preloader.addClass("preloaded");
     }, 800);
+    setTimeout(function () {
+      preloader.css({ opacity: 0, visibility: "hidden" });
+    }, 1600);
     if ($(window).width() > 1024) {
       setTimeout(function () {
         $(".header-inner").addClass("animated fadeInDown");
@@ -147,7 +150,7 @@ export const jqueryFuntion = () => {
         new WOW.WOW().init();
       }
     }
-  });
+  };
 
   $(document).ready(function () {
     /* ----------------------------------------------------------- */
@@ -261,4 +264,10 @@ export const jqueryFuntion = () => {
       }
     });
   });
+
+  if (document.readyState === "complete") {
+    onLoad();
+  } else {
+    $(window).on("load", onLoad);
+  }
 };

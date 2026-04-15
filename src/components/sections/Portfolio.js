@@ -131,7 +131,7 @@ const Portfolio = () => {
             </div>
             <a href="#" target="_blank" className="custom-btn">
               <span>
-                To be Deployed <i className="fa-solid fa-arrow-up-right-from-square" />
+                To be Deployed 
               </span>
             </a>
           </div>

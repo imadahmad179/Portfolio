@@ -35,16 +35,16 @@ const About = () => {
               <li>
                 <span>
                   <span className="animated-layer fade-in-up-animation fadeInUp wow">
-                    <span>Age :</span>
-                    <span>26 Years</span>
+                    <span>Nationality :</span>
+                    <span>Pakistan</span>
                   </span>
                 </span>
               </li>
               <li>
                 <span>
                   <span className="animated-layer fade-in-up-animation fadeInUp wow">
-                    <span>Nationality :</span>
-                    <span>Pakistan</span>
+                    <span>Address :</span>
+                    <span>Thuringia, Germany</span>
                   </span>
                 </span>
               </li>
@@ -90,14 +90,14 @@ const About = () => {
                   </span>
                 </span>
               </li>
-              {/* <li>
+              <li>
                 <span>
                   <span className="animated-layer fade-in-up-animation fadeInUp wow">
                     <span>Skype :</span>
                     <span>steven.walker</span>
                   </span>
                 </span>
-              </li> */}
+              </li>
             </ul>
           </div>
         </div>

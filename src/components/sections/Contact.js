@@ -1,82 +1,82 @@
+import { useLanguage } from "@/src/context/LanguageContext";
+
 const Contact = () => {
+  const { content } = useLanguage();
+
   return (
     <section className="contact main-section flex-column-mobile" id="contact">
-      {/* TITLE STARTS */}
       <div className="custom-title">
-        {/* MAIN TITLE STARTS */}
         <h3>
           <span>
             <span className="animated-layer fade-in-left-animation fadeInUp wow">
-              Get in touch
+              {content.contact.title}
             </span>
           </span>
         </h3>
-        {/* MAIN TITLE ENDS */}
       </div>
-      {/* TITLE ENDS */}
-      {/* CONTACTS STARTS */}
       <div className="boxes">
         <div>
-          {/* CONTACT ITEM STARTS */}
           <div className="animated-layer fade-in-down-animation fadeInUp wow">
             <i className="fa fa-phone" />
             <p>
-              <span className="small-text">phone</span>
-              +216 21 184 010
+              <span className="small-text">{content.contact.phoneLabel}</span>
+              {content.contact.phone}
             </p>
           </div>
-          {/* CONTACT ITEM ENDS */}
-          {/* CONTACT ITEM STARTS */}
           <div className="animated-layer fade-in-up-animation fadeInUp wow">
             <i className="fa fa-location-dot" />
             <p>
-              <span className="small-text">address</span>
-              London, England
+              <span className="small-text">{content.contact.addressLabel}</span>
+              {content.contact.address}
             </p>
           </div>
-          {/* CONTACT ITEM ENDS */}
         </div>
         <div>
-          {/* CONTACT ITEM STARTS */}
           <div className="animated-layer fade-in-down-animation fadeInUp wow">
             <i className="fa fa-envelope" />
             <p>
-              <span className="small-text">email</span>
-              contact@steven.net
+              <span className="small-text">{content.contact.emailLabel}</span>
+              {content.contact.email}
             </p>
           </div>
-          {/* CONTACT ITEM ENDS */}
-          {/* CONTACT ITEM STARTS */}
           <div className="animated-layer fade-in-up-animation fadeInUp wow">
             <i className="fa fa-share-nodes" />
-            <span className="small-text">follow me</span>
+            <span className="small-text">{content.contact.followLabel}</span>
             <ul className="social">
               <li>
-                <a href="#">
+                <a
+                  href="https://www.linkedin.com/in/imad-ahmad-/"
+                  aria-label="LinkedIn"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="fa-brands fa-linkedin-in" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.xing.com/profile/Imad_Ahmad09793"
+                  aria-label="Xing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i className="fa-brands fa-xing" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/imadahmad179"
+                  aria-label="GitHub"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <i className="fa-brands fa-github" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa-brands fa-twitter" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa-brands fa-dribbble" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fa-brands fa-facebook" />
                 </a>
               </li>
             </ul>
           </div>
-          {/* CONTACT ITEM ENDS */}
         </div>
       </div>
-      {/* CONTACTS ENDS */}
       <img
         alt=""
         className="separator hide-mobile"
@@ -85,4 +85,5 @@ const Contact = () => {
     </section>
   );
 };
+
 export default Contact;

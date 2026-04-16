@@ -1,4 +1,8 @@
+import { useLanguage } from "@/src/context/LanguageContext";
+
 const Copyright = () => {
+  const { content } = useLanguage();
+
   return (
     <section className="copyright">
       <img
@@ -7,35 +11,45 @@ const Copyright = () => {
         src="assets/separator-copyright.png"
       />
       <div>
-        <span>© {new Date().getFullYear()} Steven Walker</span>
         <span>
-          Designed By{" "}
-          <a
-            target="_blank"
-            href="https://themeforest.net/user/Codeefly/portfolio"
-          >
-            Codeefly
-          </a>
+          &copy; {new Date().getFullYear()} {content.footer.copyrightName}
+        </span>
+        <span>
+          {content.footer.madeWithLovePrefix}{" "}
+          <span className="footer-heart" aria-hidden="true">
+            &#10084;
+          </span>{" "}
+          {content.footer.madeWithLoveSuffix}
         </span>
         <ul>
           <li>
-            <a href="#">
+            <a
+              href="https://www.linkedin.com/in/imad-ahmad-/"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fa-brands fa-linkedin-in" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.xing.com/profile/Imad_Ahmad09793"
+              aria-label="Xing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <i className="fa-brands fa-xing" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/imadahmad179"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noreferrer"
+            >
               <i className="fa-brands fa-github" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fa-brands fa-twitter" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fa-brands fa-dribbble" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i className="fa-brands fa-facebook" />
             </a>
           </li>
         </ul>
@@ -43,4 +57,5 @@ const Copyright = () => {
     </section>
   );
 };
+
 export default Copyright;

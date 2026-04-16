@@ -1,8 +1,12 @@
 import Head from "next/head";
+import { useLanguage } from "@/src/context/LanguageContext";
+
 const ImadHead = () => {
+  const { content } = useLanguage();
+
   return (
     <Head>
-      <title>Imad's Portfolio</title>
+      <title>{content.meta.title}</title>
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       {/* Template Google Fonts */}

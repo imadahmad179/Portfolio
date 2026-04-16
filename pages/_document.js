@@ -12,8 +12,8 @@ export default function Document() {
         <link rel="stylesheet" href="/css/animate.min.css" />
         <link rel="stylesheet" href="/css/jquery.mCustomScrollbar.min.css" />
         <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="/css/skins/yellow.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-        <link rel="stylesheet" href="/css/styleswitcher.css" />
       </Head>
       <body>
         <Main />

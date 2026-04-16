@@ -1,32 +1,38 @@
+import { useLanguage } from "@/src/context/LanguageContext";
+
 const Home = () => {
+  const { content, language } = useLanguage();
+
   return (
     <section className="home image" id="home">
       <div>
-        <div className="position-relative">
+        <div className="position-relative home-copy">
           <h1>
             <span>
               <span className="animated-layer">
-                Hello<span>!</span>
+                {content.home.greeting}
+                <span>!</span>
               </span>
             </span>
             <span className="position-relative">
-              <span className="animated-layer">I am</span>
-              <span className="intro animated-layer">
-                MERN/MERN-Stack Developer with 4 years experience.
-              </span>
+              <span className="animated-layer">{content.home.introLead}</span>
+              {language === "en" ? (
+                <span className="intro animated-layer animated fadeInUp">
+                  {content.home.role}
+                </span>
+              ) : null}
             </span>
             <span>
-              <span className="animated-layer">Imad</span>
+              <span className="animated-layer">{content.home.name}</span>
             </span>
           </h1>
         </div>
       </div>
-      {/* CALL TO ACTION STARTS */}
       <span className="animated-layer animated-btn cta" id="cta">
         <span></span>
       </span>
-      {/* CALL TO ACTION ENDS */}
     </section>
   );
 };
+
 export default Home;

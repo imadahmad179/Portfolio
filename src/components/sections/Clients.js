@@ -1,11 +1,14 @@
 import { salimovSlider } from "@/src/sliderProps";
+import { useLanguage } from "@/src/context/LanguageContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const Clients = () => {
+  const { content } = useLanguage();
+
   return (
     <section className="clients">
       <div className="clients-container animated-layer fade-in-right-animation fadeInUp wow">
-        <h3>My Clients</h3>
+        <h3>{content.clientsTitle}</h3>
         <Swiper
           {...salimovSlider.clients}
           className="swiper swiper-clients fadeInUp wow"

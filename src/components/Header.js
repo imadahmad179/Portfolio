@@ -1,43 +1,41 @@
+import LanguageSwitcher from "@/src/components/LanguageSwitcher";
+import { useLanguage } from "@/src/context/LanguageContext";
+
 const Header = () => {
+  const { content } = useLanguage();
+
   return (
     <header>
-      {/* Desktop Menu Starts */}
       <div className="header-inner hide-mobile">
-        {/* MENU STARTS */}
         <div className="menu">
           <nav>
             <ul>
               <li>
                 <span className="active" id="home-link">
-                  Home
+                  {content.nav.home}
                 </span>
               </li>
               <li>
-                <span id="about-link">About</span>
+                <span id="about-link">{content.nav.about}</span>
               </li>
               <li>
-                <span id="portfolio-link">Portfolio</span>
+                <span id="portfolio-link">{content.nav.portfolio}</span>
               </li>
               <li>
-                <span id="contact-link">Contact</span>
-              </li>
-              <li>
-                <span id="blog-link">Blog</span>
+                <span id="contact-link">{content.nav.contact}</span>
               </li>
             </ul>
           </nav>
         </div>
-        {/* MENU ENDS */}
-        {/* FREELANCE STARTS */}
-        <div className="mail">
-          <p>
-            Email :<span> imadahmad.ia0@gmail.com</span>
-          </p>
+        <div className="header-utilities">
+          <LanguageSwitcher />
+          <div className="mail">
+            <p>
+              {content.nav.emailLabel} :<span> imadahmad.ia0@gmail.com</span>
+            </p>
+          </div>
         </div>
-        {/* FREELANCE ENDS */}
       </div>
-      {/* Desktop Menu Ends */}
-      {/* Mobile Menu Starts */}
       <nav className="mobile-menu">
         <div id="menuToggle">
           <input type="checkbox" id="checkboxmenu" />
@@ -45,36 +43,34 @@ const Header = () => {
           <span />
           <span />
           <ul className="list-unstyled" id="menu">
+            <li className="menu-language-item">
+              <LanguageSwitcher mobile />
+            </li>
             <li>
               <a href="#home">
-                <span>Home</span>
+                <span>{content.nav.home}</span>
               </a>
             </li>
             <li>
               <a href="#my-photo">
-                <span>About</span>
+                <span>{content.nav.about}</span>
               </a>
             </li>
             <li>
               <a href="#portfolio">
-                <span>Portfolio</span>
+                <span>{content.nav.portfolio}</span>
               </a>
             </li>
             <li>
               <a href="#contact">
-                <span>Contact</span>
-              </a>
-            </li>
-            <li>
-              <a href="#blog">
-                <span>Blog</span>
+                <span>{content.nav.contact}</span>
               </a>
             </li>
           </ul>
         </div>
       </nav>
-      {/* Mobile Menu Ends */}
     </header>
   );
 };
+
 export default Header;

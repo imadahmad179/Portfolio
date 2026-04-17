@@ -146,15 +146,15 @@ export const siteContent = {
     testimonials: [
       {
         quote:
-          "Imad was responsive, thoughtful, and quick to solve the technical issues on our WordPress site. Working with him felt easy from the first message.",
-        person: "Jasmin Aniston",
-        job: "Director - Adobe",
+          "Not my first project with Imad. Fast, responsive, skilled, and great in communication. The entire process is always smooth and friendly, and once again I received a great website.",
+        person: "Gyles Buckles",
+        job: "CEO / Brussel Lake Paragon",
       },
       {
         quote:
-          "Imad helped modernize a website that had been neglected for years. He delivered every request quickly and clearly, and he made the whole process stress-free.",
-        person: "Mark Eliott",
-        job: "Manager - Envato",
+          "Working with Imad has been an excellent experience. He consistently delivers high-quality work, stays responsive throughout the project, and ensures everything runs smoothly from start to finish. Highly recommended.",
+        person: "Philip",
+        job: "Travel Ink Media / D.O.P Director",
       },
     ],
     contact: {
@@ -365,15 +365,15 @@ export const siteContent = {
     testimonials: [
       {
         quote:
-          "Imad war schnell, aufmerksam und sehr losungsorientiert. Die technischen Probleme auf unserer WordPress-Seite wurden sauber und unkompliziert behoben.",
-        person: "Jasmin Aniston",
-        job: "Director - Adobe",
+          "Not my first project with Imad. Fast, responsive, skilled, and great in communication. The entire process is always smooth and friendly, and once again I received a great website.",
+        person: "Gyles Buckles",
+        job: "CEO / Brussel Lake Paragon",
       },
       {
         quote:
-          "Imad hat uns geholfen, eine lange vernachlassigte Website zu modernisieren. Die Zusammenarbeit war klar, effizient und jederzeit angenehm.",
-        person: "Mark Eliott",
-        job: "Manager - Envato",
+          "Working with Imad has been an excellent experience. He consistently delivers high-quality work, stays responsive throughout the project, and ensures everything runs smoothly from start to finish. Highly recommended.",
+        person: "Philip",
+        job: "Travel Ink Media / D.O.P Director",
       },
     ],
     contact: {

@@ -24,7 +24,11 @@ const About = () => {
         >
           <div>
             <div>
-              <img className="my-photo" src="assets/about.png" alt="" />
+              <img
+                className="my-photo"
+                src="/assets/about.PNG"
+                alt="Imad Ahmad portrait"
+              />
             </div>
           </div>
         </div>
